@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Quorum Distributed Consensus Thesis Summary - Jeremiah Muthama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f1f5f9;
+      color: #111827;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      margin: 0;
+    }
+    .top-nav {
+      max-width: 820px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: #0d9488;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .paper-sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: white;
+      padding: 3.5rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+      border: 1px solid #cbd5e1;
+    }
+    .ieee-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .paper-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+    .paper-authors {
+      font-size: 1.05rem;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .paper-affil {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .abstract-box {
+      margin: 1.8rem 0;
+      padding: 0 1.5rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    .abstract-title {
+      font-weight: bold;
+      font-style: italic;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid #94a3b8;
+      padding-bottom: 0.2rem;
+    }
+    p {
+      margin-bottom: 0.8rem;
+      text-indent: 1.2em;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .top-nav { display: none; }
+      .paper-sheet { border: none; box-shadow: none; padding: 0; }
+    }
+    @media (max-width: 640px) {
+      .two-column { grid-template-columns: 1fr; }
+      .paper-sheet { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="../../index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+    <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+  </div>
+
+  <article class="paper-sheet">
+    <header class="ieee-header">
+      <h1 class="paper-title">Senior Undergraduate Capstone Thesis: Lightweight Quorum Consensus for Constrained Edge IoT Networks</h1>
+      <div class="paper-authors">Jeremiah Muthama</div>
+      <div class="paper-affil">Department of Computer Science &bull; Bachelor of Science in Computer Science</div>
+    </header>
+
+    <div class="abstract-box">
+      <span class="abstract-title">Executive Summary—</span> The exponential growth of Internet of Things (IoT) edge deployments necessitates decentralized state coordination under severe power, processing, and bandwidth constraints. Classical distributed consensus protocols like Paxos, Raft, or PBFT impose message overheads O(n²) that deplete micro-battery reserves. This thesis formulates a probabilistic quorum-based consensus protocol benchmarked through a custom C++ discrete-event network simulator across 500 simulated nodes. Results indicate a 34% reduction in transaction commit latency and 27% energy conservation while guaranteeing safety under Byzantine fault thresholds of f &lt; n/3.
+    </div>
+
+    <div class="two-column">
+      <div class="col">
+        <h2>I. Problem Statement</h2>
+        <p>Resource-constrained wireless sensor nodes often operate in unreliable communication environments with high packet loss and intermittent connectivity. Traditional leader-centric consensus protocols fail catastrophically when frequent leader elections exhaust energy reserves.</p>
+
+        <h2>II. System Modeling &amp; Simulator</h2>
+        <p>A high-performance C++ simulator was engineered to model radio propagation, packet queue collisions, and sleep-wake duty cycles compliant with IEEE 802.15.4 specifications.</p>
+      </div>
+
+      <div class="col">
+        <h2>III. Key Benchmarks</h2>
+        <p>In high packet-drop regimes (15% loss), our protocol converged in an average of 42ms per round, compared to 64ms for Raft and 118ms for PBFT.</p>
+        <p>Energy expenditure per committed state block decreased from 3.2mJ to 2.33mJ, extending battery autonomy by an estimated 11 months in continuous sensor monitoring regimes.</p>
+
+        <h2>IV. Recommendations</h2>
+        <p>Future extensions explore hardware-in-the-loop validation using ESP32 microcontrollers and LoRaWAN long-range telemetry links.</p>
+      </div>
+    </div>
+  </article>
+</body>
+</html>
+

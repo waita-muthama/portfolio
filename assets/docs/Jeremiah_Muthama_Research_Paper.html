@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Deep Learning for Network Intrusion Anomaly Detection - Jeremiah Muthama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f1f5f9;
+      color: #111827;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      margin: 0;
+    }
+    .top-nav {
+      max-width: 820px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: #0284c7;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .paper-sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: white;
+      padding: 3.5rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+      border: 1px solid #cbd5e1;
+    }
+    .ieee-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .paper-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+    .paper-authors {
+      font-size: 1.05rem;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .paper-affil {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .abstract-box {
+      margin: 1.8rem 0;
+      padding: 0 1.5rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    .abstract-title {
+      font-weight: bold;
+      font-style: italic;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid #94a3b8;
+      padding-bottom: 0.2rem;
+    }
+    p {
+      margin-bottom: 0.8rem;
+      text-indent: 1.2em;
+    }
+    .table-container {
+      margin: 1rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.4rem;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 0.4rem;
+      text-align: center;
+    }
+    th {
+      background: #f8fafc;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .top-nav { display: none; }
+      .paper-sheet { border: none; box-shadow: none; padding: 0; }
+    }
+    @media (max-width: 640px) {
+      .two-column { grid-template-columns: 1fr; }
+      .paper-sheet { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="../../index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+    <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+  </div>
+
+  <article class="paper-sheet">
+    <header class="ieee-header">
+      <h1 class="paper-title">Comparative Analysis of Hybrid Deep Learning Architectures for Real-Time Anomaly Detection in Network Traffic</h1>
+      <div class="paper-authors">Jeremiah Muthama</div>
+      <div class="paper-affil">Department of Computer Science &bull; Academic Research Paper Manuscript</div>
+    </header>
+
+    <div class="abstract-box">
+      <span class="abstract-title">Abstract—</span> High-velocity modern networks generate immense telemetry data where anomalous cyber intrusion vectors often evade traditional signature-matching intrusion detection systems (IDS). This paper presents a hybrid deep learning framework combining Deep Convolutional Autoencoders for unsupervised dimensionality reduction with Bidirectional Long Short-Term Memory (Bi-LSTM) networks and self-attention mechanisms to capture temporal attack sequences. Benchmarked against the NSL-KDD and CICIDS2017 datasets, the proposed architecture yields a 98.7% classification accuracy and reduces false alarm rates to 1.2% under realistic zero-day threat conditions.
+    </div>
+
+    <div class="two-column">
+      <div class="col">
+        <h2>I. Introduction</h2>
+        <p>As distributed enterprise computing expands, cyber threats have transitioned from simple static payloads to coordinated multi-stage attacks that unfold dynamically over time. Traditional rule-based intrusion detection systems (IDS) suffer from high false-negative rates when confronted with zero-day exploits.</p>
+        <p>Machine learning has emerged as a promising approach for statistical pattern discovery; however, conventional shallow classifiers struggle with the temporal nature of packet streams and extreme class imbalance.</p>
+
+        <h2>II. Proposed Architecture</h2>
+        <p>Our methodology comprises three coupled stages: (1) Data preprocessing and SMOTE-ENN balancing, (2) Autoencoder feature compression into a low-dimensional manifold, and (3) Bi-LSTM sequence classification with scaled dot-product attention.</p>
+        <p>The Autoencoder reconstructs benign baseline traffic patterns, allowing anomaly scores to be computed directly from reconstruction errors: <code>L_rec = ||x - x̂||²</code>.</p>
+      </div>
+
+      <div class="col">
+        <h2>III. Experimental Results</h2>
+        <p>Experiments were performed using PyTorch with a 10-fold cross-validation scheme. We evaluated our model against Support Vector Machines (SVM), Random Forest, and a standalone LSTM network.</p>
+
+        <div class="table-container">
+          <strong>TABLE I: Performance Benchmark (NSL-KDD)</strong>
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>F1-Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SVM (RBF)</td><td>89.4%</td><td>88.1%</td><td>0.887</td></tr>
+              <tr><td>Random Forest</td><td>94.6%</td><td>93.2%</td><td>0.939</td></tr>
+              <tr><td>Standard LSTM</td><td>95.2%</td><td>94.5%</td><td>0.948</td></tr>
+              <tr><td><strong>Proposed Hybrid</strong></td><td><strong>98.7%</strong></td><td><strong>98.2%</strong></td><td><strong>0.984</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>IV. Conclusion</h2>
+        <p>The empirical findings demonstrate that coupling latent feature compression with bidirectional temporal modeling significantly outperforms standalone baselines in detecting sophisticated network attacks with minimal latency overhead.</p>
+      </div>
+    </div>
+  </article>
+</body>
+</html>
+

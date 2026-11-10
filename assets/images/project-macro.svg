@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="macroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e1e38"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#macroBg)"/>
+  
+  <rect x="50" y="40" width="500" height="280" rx="14" fill="#0d1424" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="80" y="75" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="700">Macroeconomic Time-Series &amp; ARIMA Forecasting</text>
+  <text x="80" y="93" fill="#94a3b8" font-family="sans-serif" font-size="10">Multi-variant regression of global tech hiring vs. capital ad expenditure</text>
+
+  <!-- Chart frame -->
+  <rect x="80" y="115" width="440" height="180" rx="8" fill="#131d31" stroke="#1e293b"/>
+
+  <!-- Horizontal gridlines -->
+  <line x1="80" y1="155" x2="520" y2="155" stroke="#1e293b" stroke-dasharray="3,3"/>
+  <line x1="80" y1="195" x2="520" y2="195" stroke="#1e293b" stroke-dasharray="3,3"/>
+  <line x1="80" y1="235" x2="520" y2="235" stroke="#1e293b" stroke-dasharray="3,3"/>
+  <line x1="80" y1="275" x2="520" y2="275" stroke="#334155"/>
+
+  <!-- Candlestick / bars preview -->
+  <rect x="110" y="210" width="12" height="50" fill="#38bdf8" rx="2"/>
+  <rect x="140" y="190" width="12" height="70" fill="#38bdf8" rx="2"/>
+  <rect x="170" y="160" width="12" height="100" fill="#38bdf8" rx="2"/>
+  <rect x="200" y="180" width="12" height="80" fill="#f87171" rx="2"/>
+  <rect x="230" y="150" width="12" height="110" fill="#38bdf8" rx="2"/>
+  <rect x="260" y="130" width="12" height="130" fill="#38bdf8" rx="2"/>
+
+  <!-- Time Series Forecast line with confidence interval -->
+  <path d="M 272 135 Q 310 160 350 140 T 420 120 T 500 95 L 500 190 L 272 240 Z" fill="url(#goldGrad)"/>
+  <path d="M 272 135 Q 310 160 350 140 T 420 120 T 500 95" fill="none" stroke="#fbbf24" stroke-width="3"/>
+  
+  <rect x="420" y="105" width="85" height="22" rx="4" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="462" y="120" fill="#fde047" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">ARIMA (p,d,q)</text>
+</svg>
+

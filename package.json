@@ -1,0 +1,21 @@
+{
+  "name": "jeremiah-muthama-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Portfolio for Jeremiah Muthama - Computer Science, Software Engineering, Academic Research, Data Analysis & Growth Marketing",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "computer-science",
+    "software-engineering",
+    "data-analysis",
+    "academic-research",
+    "technical-marketing"
+  ],
+  "author": "Jeremiah Muthama",
+  "license": "MIT"
+}
+

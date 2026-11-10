@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremiah Muthama Waita | Curriculum Vitae - Computer Science &amp; Research Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-dark: #1e40af;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --card-bg: #ffffff;
+      --accent: #059669;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 2.5rem 1rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .resume-actions {
+      max-width: 880px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.3rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      background: white;
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+    }
+
+    .resume-paper {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 3.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    .resume-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .name-title h1 {
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .name-title h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .summary-text {
+      font-size: 0.94rem;
+      color: #334155;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem 1.5rem;
+    }
+
+    .competency-item {
+      font-size: 0.88rem;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .competency-item::before {
+      content: '▪';
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .entry {
+      margin-bottom: 1.6rem;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .entry-company {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .entry-date {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      margin-top: 0.35rem;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .resume-actions {
+        display: none !important;
+      }
+      .resume-paper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      @page {
+        margin: 1.2cm;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-paper {
+        padding: 1.5rem;
+      }
+      .competencies-grid {
+        grid-template-columns: 1fr;
+      }
+      .entry-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-actions">
+    <a href="index.html" class="btn btn-outline">&larr; Back to Portfolio</a>
+    <button onclick="window.print()" class="btn btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      <span>Print / Save as PDF</span>
+    </button>
+  </div>
+
+  <div class="resume-paper">
+    <header class="resume-header">
+      <div class="name-title">
+        <h1>Jeremiah Muthama Waita</h1>
+        <h2>Academic Research Consultant | Online STEM Tutor | Data Analyst | Software Developer</h2>
+      </div>
+      <div class="contact-info">
+        <span>✉️ <a href="mailto:waitamuthama2021@gmail.com">waitamuthama2021@gmail.com</a></span>
+        <span>📞 <a href="tel:0705297607">0705297607</a> / <a href="tel:0794158981">0794158981</a></span>
+        <span>💼 <a href="https://www.linkedin.com/in/waita-muthama-a40769188/" target="_blank">LinkedIn Profile</a></span>
+        <span>🐙 <a href="https://github.com/waita-muthama" target="_blank">GitHub Profile</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h3 class="section-title">Professional Summary</h3>
+      <p class="summary-text">
+        Computer Science graduate with extensive professional experience in academic research consultation (theses, dissertations, statistical modeling), online STEM tutoring (Mathematics, Physics &amp; Computer Science), data analytics, business intelligence, and enterprise systems. Skilled in understanding stakeholder needs, interpreting complex quantitative data, preparing analytical reports, and delivering clear educational instruction. Supported more than 5,000 academic research and analytics projects and mentored over 200 students. Proficient in SPSS, Minitab, Power BI, Tableau, Advanced Excel, and database tools, with strengths in data accuracy, documentation, communication, and analytical problem-solving.
+      </p>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="section">
+      <h3 class="section-title">Core Competencies</h3>
+      <div class="competencies-grid">
+        <div class="competency-item">Thesis &amp; Dissertation Methodology Consulting</div>
+        <div class="competency-item">Online Mathematics &amp; Physics Tutoring (Calculus, Mechanics)</div>
+        <div class="competency-item">Quantitative Statistical Analysis (SPSS, ANOVA, Regression)</div>
+        <div class="competency-item">Qualitative Coding &amp; Thematic Analysis (NVivo, MAXQDA)</div>
+        <div class="competency-item">Scale Reliability &amp; Validation (Cronbach's Alpha)</div>
+        <div class="competency-item">Performance Reporting &amp; BI Dashboards (Power BI, Tableau)</div>
+        <div class="competency-item">Enterprise Systems &amp; Secure Access (Cisco ISE, Firepower)</div>
+        <div class="competency-item">Full-Stack Software Development (React.js, Node.js, SQL)</div>
+        <div class="competency-item">Business Customer Acquisition &amp; Growth Analytics</div>
+        <div class="competency-item">Client Training, Digital Curriculum &amp; Mentorship</div>
+        <div class="competency-item">Database Maintenance, Backups &amp; Disaster Recovery</div>
+        <div class="competency-item">Technical Escalation, Documentation &amp; Problem-Solving</div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <h3 class="section-title">Professional Experience</h3>
+
+      <!-- Role 1 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Information Technology Assistant and Software Developer</span>
+          <span class="entry-date">January 2026 – Present</span>
+        </div>
+        <div class="entry-company">Independent Policing Oversight Authority (IPOA)</div>
+        <ul class="bullet-list">
+          <li>Support enterprise applications and network infrastructure used in daily organizational operations.</li>
+          <li>Investigate application, system, and connectivity issues, resolving routine concerns and coordinating technical escalations.</li>
+          <li>Deploy applications and maintain databases, backups, and supporting documentation to enable reliable information access.</li>
+          <li>Configure secure remote access using Cisco Secure Client and support access management through Cisco Identity Services Engine (ISE).</li>
+          <li>Monitor network security using Cisco Firepower Threat Defense and Firepower Management Center (FMC).</li>
+          <li>Support communication services through Cisco Unified Communications Manager (CUCM), Unity Connection, and internet protocol phones.</li>
+          <li>Maintain system documentation and technology inventories to support operational tracking and accountability.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Academic Assistant (Research Consultant &amp; Statistical Analyst)</span>
+          <span class="entry-date">2022 – 2025</span>
+        </div>
+        <div class="entry-company">Hong Kong Writers</div>
+        <ul class="bullet-list">
+          <li>Supported more than 5,000 research, analytics, and data-driven academic projects (theses and dissertations).</li>
+          <li>Analyzed complex datasets using Microsoft Excel, SPSS, Minitab, Power BI, MATLAB, Tableau, NVivo, and MAXQDA.</li>
+          <li>Cleaned, validated, and transformed datasets to improve accuracy and consistency before analysis.</li>
+          <li>Conducted inferential and parametric hypothesis testing (ANOVA, MANOVA, Multiple Regressions, Chi-Square).</li>
+          <li>Prepared analytical reports, dashboards, charts, and publication-ready tables compliant with APA/Harvard standards.</li>
+          <li>Trained clients in statistical, research, and visualization tools, explaining analytical processes in accessible terms.</li>
+          <li>Maintained structured datasets and accurate documentation to support review and defense.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Information Technology Tutor &amp; STEM Mentor</span>
+          <span class="entry-date">January 2021 – December 2021</span>
+        </div>
+        <div class="entry-company">Elgon View College</div>
+        <ul class="bullet-list">
+          <li>Delivered training in Microsoft Excel, statistical analysis, databases, networking, and programming.</li>
+          <li>Mentored more than 200 students in practical technology skills and analytical problem-solving.</li>
+          <li>Provided one-on-one and group tutoring in Mathematics, Physics, and computing concepts.</li>
+          <li>Developed digital learning resources, practical exercises, and online assessments.</li>
+          <li>Facilitated workshops in data analytics, software development, and networking.</li>
+          <li>Resolved software, hardware, and connectivity concerns affecting teaching and learning.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Junior Software Engineer</span>
+          <span class="entry-date">2020 – 2021</span>
+        </div>
+        <div class="entry-company">Techbrand</div>
+        <ul class="bullet-list">
+          <li>Translated business requirements into application features and database solutions.</li>
+          <li>Developed applications using Java, PHP, Node.js, JavaScript, and React.js.</li>
+          <li>Designed and maintained MySQL and PostgreSQL databases to support structured information management.</li>
+          <li>Built secure application programming interfaces (APIs) to enable system integration and data exchange.</li>
+          <li>Investigated software defects, database issues, and application performance problems.</li>
+          <li>Optimized database queries and backend processes to improve system performance.</li>
+        </ul>
+      </div>
+
+      <!-- Role 5 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Industrial Attachment – ICT Department</span>
+          <span class="entry-date">2018</span>
+        </div>
+        <div class="entry-company">Kenya Methodist University (KeMU)</div>
+        <ul class="bullet-list">
+          <li>Provided first-level technical support to staff and students.</li>
+          <li>Assisted with data entry, electronic records, and institutional information management systems.</li>
+          <li>Supported workstation configuration, software installation, and network connectivity.</li>
+          <li>Diagnosed routine software, hardware, and application problems.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h3 class="section-title">Education &amp; Certifications</h3>
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Bachelor of Science in Computer Science</span>
+            <div class="entry-company">University of Eldoret</div>
+          </div>
+          <span class="entry-date">2015 – 2019</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Certificate in Computer Packages</span>
+            <div class="entry-company">Emmanuel Computer College</div>
+          </div>
+          <span class="entry-date">2015</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Kenya Certificate of Secondary Education (KCSE)</span>
+            <div class="entry-company">Kambi Mawe Secondary School</div>
+          </div>
+          <span class="entry-date">2014</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
